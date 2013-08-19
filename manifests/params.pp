@@ -8,7 +8,13 @@ class zoneminder::params {
   $zoneminder_source = 'https://github.com/ZoneMinder/ZoneMinder.git'
 
   $ffmpeg_source = 'git://source.ffmpeg.org/ffmpeg.git'
-  $ffmpeg_configure_options = '--enable-shared --enable-swscale --enable-gpl'
+  $ffmpeg_configure_options = '--enable-shared --enable-swscale --enable-gpl --enable-libx264 --extra-libs=-ldl'
 
   $libjpeg_source = 'http://downloads.sourceforge.net/project/libjpeg-turbo/1.1.1/libjpeg-turbo_1.1.1_amd64.deb?use_mirror=voxel'
+  
+  $yasm_source = 'http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz'
+  
+  $x264_source = 'git://git.videolan.org/x264.git'
+  $x264_configure_options = '--enable-shared'
+  
 }

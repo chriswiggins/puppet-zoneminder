@@ -5,5 +5,5 @@ class zoneminder::install {
   }
 
   include zoneminder::install::ffmpeg, zoneminder::install::zoneminder  
-  Class['zoneminder::install::ffmpeg'] -> Class['zoneminder::install::zoneminder']
+  Class['zoneminder::install::yasm'] -> Class['zoneminder::install::x264'] -> Class['zoneminder::install::ffmpeg'] -> Class['zoneminder::install::zoneminder']
 }
