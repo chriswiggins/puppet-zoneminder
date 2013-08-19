@@ -4,6 +4,6 @@ class zoneminder::install {
     before => Class["zoneminder::install::ffmpeg"]
   }
 
-  include zoneminder::install::yasm, zoneminder::install::x264, zoneminder::install::ffmpeg, zoneminder::install::zoneminder  
-  Class['zoneminder::install::yasm'] -> Class['zoneminder::install::x264'] -> Class['zoneminder::install::ffmpeg'] -> Class['zoneminder::install::zoneminder']
+  include zoneminder::install::yasm, zoneminder::install::x264, zoneminder::install::ffmpeg, zoneminder::install::httpsegmenter, zoneminder::install::zoneminder  
+  Class['zoneminder::install::yasm'] -> Class['zoneminder::install::x264'] -> Class['zoneminder::install::ffmpeg'] -> Class['zoneminder::install::httpsegmenter'] -> Class['zoneminder::install::zoneminder']
 }
